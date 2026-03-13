@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,13 +76,15 @@
         }
     </script>
 </head>
+
 <body class="bg-background text-foreground min-h-screen">
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
-                    <h1 class="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    <h1
+                        class="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                         Italo Tavares
                     </h1>
                 </div>
@@ -107,7 +110,8 @@
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors">
+                    <button id="mobile-menu-button"
+                        class="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors">
                         <i data-lucide="menu" class="h-6 w-6"></i>
                     </button>
                 </div>
@@ -144,13 +148,15 @@
                             Desenvolvedor Full Stack
                         </h1>
                         <p class="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                            Criando soluções tecnológicas inovadoras com paixão e expertise em desenvolvimento web moderno
+                            Criando soluções tecnológicas inovadoras com paixão e expertise em desenvolvimento web
+                            moderno
                         </p>
 
                         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                             <button class="btn-primary group" data-page="projects">
                                 <span>Ver Projetos</span>
-                                <i data-lucide="arrow-right" class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"></i>
+                                <i data-lucide="arrow-right"
+                                    class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"></i>
                             </button>
                             <button class="btn-secondary" data-page="about">
                                 <span>Sobre Mim</span>
@@ -186,7 +192,8 @@
         <section id="about-page" class="page-content hidden">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    <h2
+                        class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                         Sobre Mim
                     </h2>
                     <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -238,7 +245,8 @@
         <section id="projects-page" class="page-content hidden">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    <h2
+                        class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                         Meus Projetos
                     </h2>
                     <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -248,14 +256,17 @@
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Project 1 -->
-                     <div class="project-card group">
-                        <div class="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg mb-4 flex items-center justify-center">
+                    <div class="project-card group">
+                        <div
+                            class="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg mb-4 flex items-center justify-center">
                             <!-- <i data-lucide="smartphone" class="h-12 w-12 text-primary"></i> -->
-                            <img src="./assets/imgs/beatten.png" alt="BeattenGames Screenshot" class="lightbox-trigger cursor-pointer">
+                            <img src="./assets/imgs/beatten.png" alt="BeattenGames Screenshot"
+                                class="lightbox-trigger cursor-pointer">
                         </div>
                         <h3 class="text-xl font-semibold mb-2">BeattenGames</h3>
                         <p class="text-muted-foreground mb-4">
-                            Plataforma de gerenciamento de video games com interface moderna, intuitiva e utilizando IA para servir como base de dados para gerar perguntas e respostas para a historia do jogo.
+                            Plataforma de gerenciamento de video games com interface moderna, intuitiva e utilizando IA
+                            para servir como base de dados para gerar perguntas e respostas para a historia do jogo.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="tech-tag">Vue.js</span>
@@ -275,12 +286,81 @@
                         </div>
                     </div>
 
+                    <div class="project-card group">
+                        <div
+                            class="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg mb-4 flex items-center justify-center">
+                            <!-- <i data-lucide="smartphone" class="h-12 w-12 text-primary"></i> -->
+                            <img src="./assets/imgs/site_corretora.png" alt="Site Corretora Screenshot"
+                                class="lightbox-trigger cursor-pointer">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Site Corretora</h3>
+                        <p class="text-muted-foreground mb-4">
+                            Site para corretora de imóveis com interface moderna e intuitiva.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Wordpress</span>
+                            <span class="tech-tag">Php</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Mysql</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://reginasouzacorretora.com" target="_blank" class="btn-sm">
+                                <i data-lucide="external-link" class="h-4 w-4 mr-1"></i>
+                                Visitar site
+                            </a>
+                            <button class="btn-sm btn-sm btn-outline cursor-not-allowed" disabled>
+                                <i data-lucide="github" class="h-4 w-4 mr-1"></i>
+                                Code
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card group">
+                        <div
+                            class="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg mb-4 flex items-center justify-center">
+                            <!-- <i data-lucide="smartphone" class="h-12 w-12 text-primary"></i> -->
+                            <img src="./assets/imgs/clube_role.png" alt="Clube Role Screenshot"
+                                class="lightbox-trigger cursor-pointer">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Clube Role</h3>
+                        <p class="text-muted-foreground mb-4">
+                            Somos um aplicativo dedicado a revelar o melhor do Brasil, conectando pessoas a lugares
+                            incríveis que merecem ser descobertos. Nosso objetivo é facilitar a busca por destinos
+                            especiais, experiências únicas e ambientes acolhedores, ajudando você a encontrar bons
+                            locais para visitar em qualquer região do país
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">NestJS</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Mysql</span>
+                        </div>
+                        <!-- div informando que tem app para android e ios -->
+                        <div class="flex gap-2">
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">iOS</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://reginasouzacorretora.com" target="_blank" class="btn-sm">
+                                <i data-lucide="external-link" class="h-4 w-4 mr-1"></i>
+                                Visitar site
+                            </a>
+                            <button class="btn-sm btn-sm btn-outline cursor-not-allowed" disabled>
+                                <i data-lucide="github" class="h-4 w-4 mr-1"></i>
+                                Code
+                            </button>
+                        </div>
+                    </div>
+
 
 
                     <!-- Project 2 -->
                     <div class="project-card group">
-                        <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <img src="./assets/imgs/senai.png" alt="BeattenGames Screenshot" class="lightbox-trigger cursor-pointer">
+                        <div
+                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
+                            <img src="./assets/imgs/senai.png" alt="BeattenGames Screenshot"
+                                class="lightbox-trigger cursor-pointer">
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Senai-AL(Woocommerce - 2024)</h3>
                         <p class="text-muted-foreground mb-4">
@@ -306,8 +386,10 @@
                     </div>
 
                     <div class="project-card group">
-                        <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <img src="./assets/imgs/senai25.png" alt="BeattenGames Screenshot" class="lightbox-trigger cursor-pointer">
+                        <div
+                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
+                            <img src="./assets/imgs/senai25.png" alt="BeattenGames Screenshot"
+                                class="lightbox-trigger cursor-pointer">
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Senai-AL(Woocommerce - 2025)</h3>
                         <p class="text-muted-foreground mb-4">
@@ -334,8 +416,10 @@
 
                     <!-- Project 2 -->
                     <div class="project-card group">
-                        <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <img src="./assets/imgs/fiea.png" alt="BeattenGames Screenshot" class="lightbox-trigger cursor-pointer">
+                        <div
+                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
+                            <img src="./assets/imgs/fiea.png" alt="BeattenGames Screenshot"
+                                class="lightbox-trigger cursor-pointer">
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Fiea-AL(2024)</h3>
                         <p class="text-muted-foreground mb-4">
@@ -362,8 +446,10 @@
 
                     <!-- Project 2 -->
                     <div class="project-card group">
-                        <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <img src="./assets/imgs/sesi.png" alt="BeattenGames Screenshot" class="lightbox-trigger cursor-pointer">
+                        <div
+                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
+                            <img src="./assets/imgs/sesi.png" alt="BeattenGames Screenshot"
+                                class="lightbox-trigger cursor-pointer">
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Sesi-AL(2024)</h3>
                         <p class="text-muted-foreground mb-4">
@@ -390,15 +476,18 @@
 
                     <!-- Project 2 -->
                     <div class="project-card group">
-                        <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <img src="./assets/imgs/intranet.png" alt="BeattenGames Screenshot" class="lightbox-trigger cursor-pointer">
+                        <div
+                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
+                            <img src="./assets/imgs/intranet.png" alt="BeattenGames Screenshot"
+                                class="lightbox-trigger cursor-pointer">
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Portal do Colaborador(FIEA-AL - 2024)</h3>
                         <p class="text-muted-foreground mb-4">
-                            Plataforma de intranet com painel administrativo com facilidade para alimentação de conteudo.
+                            Plataforma de intranet com painel administrativo com facilidade para alimentação de
+                            conteudo.
                         </p>
                         <!-- text warning -->
-                         <p class="text-sm tag-warning">Projeto interno da empresa</p>
+                        <p class="text-sm tag-warning">Projeto interno da empresa</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="tech-tag">Wordpress</span>
                             <span class="tech-tag">Php</span>
@@ -420,12 +509,15 @@
 
                     <!-- Project 3 -->
                     <div class="project-card group">
-                        <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <img src="./assets/imgs/reconhecimento.png" alt="BeattenGames Screenshot" class="lightbox-trigger cursor-pointer">
+                        <div
+                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
+                            <img src="./assets/imgs/reconhecimento.png" alt="BeattenGames Screenshot"
+                                class="lightbox-trigger cursor-pointer">
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Reconhecimento Facial</h3>
                         <p class="text-muted-foreground mb-4">
-                            Sistema de reconhecimento facial com interface intuitiva e funcionalidade avançada com azure para localizar seu rosto na imagem com diversas pessoas(ex: em eventos, etc).
+                            Sistema de reconhecimento facial com interface intuitiva e funcionalidade avançada com azure
+                            para localizar seu rosto na imagem com diversas pessoas(ex: em eventos, etc).
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="tech-tag">Php</span>
@@ -446,7 +538,8 @@
 
                     <!-- Project 2 -->
                     <div class="project-card group">
-                        <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
+                        <div
+                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
                             <i data-lucide="globe" class="h-12 w-12 text-primary"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">E-commerce Plataforma</h3>
@@ -473,12 +566,14 @@
                     </div>
 
                     <div class="project-card group">
-                        <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
+                        <div
+                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
                             <i data-lucide="bar-chart" class="h-12 w-12 text-primary"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Viagens(Copy Booking)</h3>
                         <p class="text-muted-foreground mb-4">
-                            Aplicativo IOS com interface intuitiva com intuito de duplicar o layout de uma agencia de viagens
+                            Aplicativo IOS com interface intuitiva com intuito de duplicar o layout de uma agencia de
+                            viagens
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="tech-tag">SwiftUIKit</span>
@@ -496,18 +591,21 @@
                     </div>
 
                     <div class="project-card group">
-                        <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
+                        <div
+                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
                             <i data-lucide="bar-chart" class="h-12 w-12 text-primary"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">PetsShop Agenda</h3>
                         <p class="text-muted-foreground mb-4">
-                            Aplicativo IOS com interface intuitiva com intuito de colocar em pratica os conhecimentos adquiridos, um agendador de consultas
+                            Aplicativo IOS com interface intuitiva com intuito de colocar em pratica os conhecimentos
+                            adquiridos, um agendador de consultas
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="tech-tag">SwiftUI</span>
                         </div>
                         <div class="flex gap-2">
-                            <a href="https://www.linkedin.com/posts/italogabrielsantostavares_quero-compartilhar-um-pequeno-marco-pessoal-activity-7419745702165164033-YIxG?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAyCLQBYIRx3Uv3b-XYoqPMsYAILKOVXr8" target="_blank" class="btn-sm">
+                            <a href="https://www.linkedin.com/posts/italogabrielsantostavares_quero-compartilhar-um-pequeno-marco-pessoal-activity-7419745702165164033-YIxG?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAyCLQBYIRx3Uv3b-XYoqPMsYAILKOVXr8"
+                                target="_blank" class="btn-sm">
                                 <i data-lucide="external-link" class="h-4 w-4 mr-1"></i>
                                 Visitar site
                             </a>
@@ -532,7 +630,8 @@
 
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    <h2
+                        class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                         Meus Plugins
                     </h2>
                     <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -543,12 +642,14 @@
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Project 1 -->
                     <div class="project-card group">
-                        <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
+                        <div
+                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
                             <i data-lucide="globe" class="h-12 w-12 text-primary"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Gateway do PIX(Banco do Brasil)</h3>
                         <p class="text-muted-foreground mb-4">
-                            Gateway do PIX(Banco do Brasil) com interface intuitiva, verificação automatica de pagamento e alteração de status no woocommerce.
+                            Gateway do PIX(Banco do Brasil) com interface intuitiva, verificação automatica de pagamento
+                            e alteração de status no woocommerce.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="tech-tag">Wordpress</span>
@@ -561,12 +662,14 @@
 
                     <!-- Project 2 -->
                     <div class="project-card group">
-                        <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
+                        <div
+                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
                             <i data-lucide="globe" class="h-12 w-12 text-primary"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Gateway de Boleto(Banco do Brasil)</h3>
                         <p class="text-muted-foreground mb-4">
-                            Gateway do Boleto(Banco do Brasil) com interface intuitiva, verificação automatica de pagamento e alteração de status no woocommerce.
+                            Gateway do Boleto(Banco do Brasil) com interface intuitiva, verificação automatica de
+                            pagamento e alteração de status no woocommerce.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="tech-tag">Wordpress</span>
@@ -579,12 +682,15 @@
 
                     <!-- Project 3 -->
                     <div class="project-card group">
-                        <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
+                        <div
+                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
                             <i data-lucide="bar-chart" class="h-12 w-12 text-primary"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Gateway de Dois Cartões(E-rede)</h3>
                         <p class="text-muted-foreground mb-4">
-                            Gateway de Dois Cartões(E-rede) realizei uma estrutura de contorno e foi desenvolvido o gateway que utiliza dois cartões com verificação automatica de pagamento e alteração de status no woocommerce.
+                            Gateway de Dois Cartões(E-rede) realizei uma estrutura de contorno e foi desenvolvido o
+                            gateway que utiliza dois cartões com verificação automatica de pagamento e alteração de
+                            status no woocommerce.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="tech-tag">Wordpress</span>
@@ -596,12 +702,14 @@
                     </div>
 
                     <div class="project-card group">
-                        <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
+                        <div
+                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
                             <i data-lucide="bar-chart" class="h-12 w-12 text-primary"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Enquete Institucional</h3>
                         <p class="text-muted-foreground mb-4">
-                            Enquete Institucional com Dashboard interativo para visualização de dados e métricas em tempo real
+                            Enquete Institucional com Dashboard interativo para visualização de dados e métricas em
+                            tempo real
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="tech-tag">JavaScript</span>
@@ -618,7 +726,8 @@
         <section id="stacks-page" class="page-content hidden">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    <h2
+                        class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                         Tecnologias
                     </h2>
                     <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -896,7 +1005,8 @@
         <section id="education-page" class="page-content hidden">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    <h2
+                        class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                         Formação
                     </h2>
                     <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -923,7 +1033,7 @@
                                     banco de dados e arquitetura de sistemas.
                                     Capacidade de integrar tecnologia e estratégia de negócios,
                                     desenvolvendo soluções que otimizam operações e impulsionam o crescimento,
-                                     com participação ativa em projetos de inovação e pesquisa.
+                                    com participação ativa em projetos de inovação e pesquisa.
                                 </p>
                             </div>
                         </div>
@@ -943,7 +1053,8 @@
                         <div class="card p-6">
                             <div class="flex items-center mb-4">
                                 <i data-lucide="award" class="h-5 w-5 text-primary mr-2"></i>
-                                <h3 class="font-semibold">Nest.js: aplicações Node.js eficientes e escaláveis do lado do servidor</h3>
+                                <h3 class="font-semibold">Nest.js: aplicações Node.js eficientes e escaláveis do lado do
+                                    servidor</h3>
                             </div>
                             <p class="text-sm text-muted-foreground mb-2">Alura</p>
                             <p class="text-sm text-muted-foreground">2023</p>
@@ -1006,12 +1117,15 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contato</h3>
                     <div class="space-y-2">
-                        <a href="mailto:contato@devportfolio.com" class="flex items-center text-muted-foreground hover:text-primary transition-colors">
+                        <a href="mailto:contato@devportfolio.com"
+                            class="flex items-center text-muted-foreground hover:text-primary transition-colors">
                             <i data-lucide="mail" class="h-4 w-4 mr-2"></i>
                             itarugabriel@gmail.com
                         </a>
                         <!-- text=olá, fiquei interessado sobre o seu trabalho -->
-                        <a href="https://wa.me/5582987117461?text=Ol%C3%A1,%20fiquei%20interessado%20sobre%20o%20seu%20trabalho" target="_blank" class="flex items-center text-muted-foreground hover:text-primary transition-colors">
+                        <a href="https://wa.me/5582987117461?text=Ol%C3%A1,%20fiquei%20interessado%20sobre%20o%20seu%20trabalho"
+                            target="_blank"
+                            class="flex items-center text-muted-foreground hover:text-primary transition-colors">
                             <i data-lucide="phone" class="h-4 w-4 mr-2"></i>
                             +55 82 98711-7461
                         </a>
@@ -1021,11 +1135,13 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Redes Sociais</h3>
                     <div class="space-y-2">
-                        <a href="https://github.com/ItaloGabs" class="flex items-center text-muted-foreground hover:text-primary transition-colors">
+                        <a href="https://github.com/ItaloGabs"
+                            class="flex items-center text-muted-foreground hover:text-primary transition-colors">
                             <i data-lucide="github" class="h-4 w-4 mr-2"></i>
                             GitHub
                         </a>
-                        <a href="https://www.linkedin.com/in/italogabrielsantostavares/" class="flex items-center text-muted-foreground hover:text-primary transition-colors">
+                        <a href="https://www.linkedin.com/in/italogabrielsantostavares/"
+                            class="flex items-center text-muted-foreground hover:text-primary transition-colors">
                             <i data-lucide="linkedin" class="h-4 w-4 mr-2"></i>
                             LinkedIn
                         </a>
@@ -1052,4 +1168,5 @@
     <script src="./assets/js/lightBox.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
