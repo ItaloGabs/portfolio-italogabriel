@@ -4,1105 +4,970 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Italo Tavares</title>
-    <meta name="description" content="Portfólio tecnológico profissional de Italo Tavares">
+
+    <!-- Primary Meta Tags -->
+    <title>Italo Tavares — Desenvolvedor Full Stack</title>
+    <meta name="title" content="Italo Tavares — Desenvolvedor Full Stack">
+    <meta name="description"
+        content="Portfólio de Italo Tavares. Desenvolvedor Full Stack com 3+ anos criando soluções web com Vue.js, Node.js, NestJS, PHP, Swift e mais.">
     <meta name="author" content="Italo Tavares">
+    <meta name="keywords"
+        content="desenvolvedor full stack, Vue.js, Node.js, NestJS, PHP, TypeScript, Swift, portfólio, web developer, freelancer">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a0a">
 
-    <link rel="icon" type="image/png" href="assets/icons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
-    <link rel="shortcut icon" href="assets/icons/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="PortFólio Italo Tavares" />
-    <link rel="manifest" href="assets/icons/site.webmanifest" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://italogabs.github.io/portfolio-italogabriel/">
+    <meta property="og:title" content="Italo Tavares — Desenvolvedor Full Stack">
+    <meta property="og:description"
+        content="Portfólio de Italo Tavares. Desenvolvedor Full Stack com 3+ anos criando soluções inovadoras com Vue.js, Node.js, PHP, Swift e mais.">
+    <meta property="og:image" content="./assets/imgs/og-image.png">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Italo Tavares — Portfolio">
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://italogabs.github.io/portfolio-italogabriel/">
+    <meta name="twitter:title" content="Italo Tavares — Desenvolvedor Full Stack">
+    <meta name="twitter:description" content="Portfólio profissional de Italo Tavares. Full Stack Developer.">
+    <meta name="twitter:image" content="./assets/imgs/og-image.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://italogabs.github.io/portfolio-italogabriel/">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="shortcut icon" href="assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Italo Tavares">
+    <link rel="manifest" href="assets/icons/site.webmanifest">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Italo Tavares",
+        "jobTitle": "Desenvolvedor Full Stack",
+        "url": "https://italogabs.github.io/portfolio-italogabriel/",
+        "sameAs": [
+            "https://github.com/ItaloGabs",
+            "https://www.linkedin.com/in/italogabrielsantostavares/"
+        ],
+        "email": "itarugabriel@gmail.com",
+        "knowsAbout": ["Vue.js", "Node.js", "NestJS", "PHP", "WordPress", "TypeScript", "Swift", "MySQL", "PostgreSQL", "Docker"],
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Faculdade Estácio de Alagoas"
+        }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
+    <!-- Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/style/style.css">
-
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        border: 'hsl(var(--border))',
-                        input: 'hsl(var(--input))',
-                        ring: 'hsl(var(--ring))',
-                        background: 'hsl(var(--background))',
-                        foreground: 'hsl(var(--foreground))',
-                        primary: {
-                            DEFAULT: 'hsl(var(--primary))',
-                            foreground: 'hsl(var(--primary-foreground))'
-                        },
-                        secondary: {
-                            DEFAULT: 'hsl(var(--secondary))',
-                            foreground: 'hsl(var(--secondary-foreground))'
-                        },
-                        muted: {
-                            DEFAULT: 'hsl(var(--muted))',
-                            foreground: 'hsl(var(--muted-foreground))'
-                        },
-                        accent: {
-                            DEFAULT: 'hsl(var(--accent))',
-                            foreground: 'hsl(var(--accent-foreground))'
-                        },
-                        destructive: {
-                            DEFAULT: 'hsl(var(--destructive))',
-                            foreground: 'hsl(var(--destructive-foreground))'
-                        },
-                        popover: {
-                            DEFAULT: 'hsl(var(--popover))',
-                            foreground: 'hsl(var(--popover-foreground))'
-                        },
-                        card: {
-                            DEFAULT: 'hsl(var(--card))',
-                            foreground: 'hsl(var(--card-foreground))'
-                        }
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.6s ease-out',
-                        'slide-up': 'slideUp 0.6s ease-out',
-                        'scale-in': 'scaleIn 0.3s ease-out',
-                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite'
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 
-<body class="bg-background text-foreground min-h-screen">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0">
-                    <h1
-                        class="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                        Italo Tavares
-                    </h1>
-                </div>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-bg" aria-hidden="true"></div>
 
-                <!-- Desktop Navigation -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#home" class="nav-link active" data-page="home">Início</a>
-                        <a href="#about" class="nav-link" data-page="about">Sobre</a>
-                        <a href="#projects" class="nav-link" data-page="projects">Projetos</a>
-                        <a href="#stacks" class="nav-link" data-page="stacks">Stacks</a>
-                        <a href="#education" class="nav-link" data-page="education">Formação</a>
-                    </div>
-                </div>
+    <!-- ═══════════ NAVIGATION ═══════════ -->
+    <nav class="navbar" id="navbar" aria-label="Navegação principal">
+        <div class="navbar-inner">
+            <a href="#hero" class="navbar-logo" aria-label="Italo Tavares — Início">italoTavares</a>
 
-                <!-- Theme Toggle -->
-                <button id="theme-toggle" class="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors">
-                    <!-- <i data-lucide="sun" class="h-5 w-5 dark:hidden"></i>
-                    <i data-lucide="moon" class="h-5 w-5 hidden dark:block"></i> -->
-                    <i data-lucide="sun" class="h-5 w-5 hidden dark:block"></i>
-                    <i data-lucide="moon" class="h-5 w-5 dark:hidden"></i>
+            <!-- Desktop Nav -->
+            <ul class="nav-links" role="menubar">
+                <li><a href="#hero" class="nav-link active" data-section="hero" role="menuitem">Início</a></li>
+                <li><a href="#about" class="nav-link" data-section="about" role="menuitem">Sobre</a></li>
+                <li><a href="#experience" class="nav-link" data-section="experience" role="menuitem">Experiência</a>
+                </li>
+                <li><a href="#projects" class="nav-link" data-section="projects" role="menuitem">Projetos</a></li>
+                <li><a href="#stacks" class="nav-link" data-section="stacks" role="menuitem">Stacks</a></li>
+                <li><a href="#education" class="nav-link" data-section="education" role="menuitem">Formação</a></li>
+            </ul>
+
+            <!-- Actions -->
+            <div class="nav-actions">
+                <button id="theme-toggle" class="nav-btn" aria-label="Alternar tema">
+                    <i data-lucide="sun" class="icon-show-light"></i>
+                    <i data-lucide="moon" class="icon-show-dark"></i>
                 </button>
-
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-button"
-                        class="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors">
-                        <i data-lucide="menu" class="h-6 w-6"></i>
-                    </button>
-                </div>
+                <button id="mobile-menu-btn" class="nav-btn mobile-toggle" aria-label="Abrir menu"
+                    aria-expanded="false">
+                    <i data-lucide="menu"></i>
+                </button>
             </div>
         </div>
 
-        <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="md:hidden hidden bg-background border-t border-border">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="mobile-nav-link active" data-page="home">Início</a>
-                <a href="#about" class="mobile-nav-link" data-page="about">Sobre</a>
-                <a href="#projects" class="mobile-nav-link" data-page="projects">Projetos</a>
-                <a href="#stacks" class="mobile-nav-link" data-page="stacks">Stacks</a>
-                <a href="#education" class="mobile-nav-link" data-page="education">Formação</a>
-            </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu" role="menu">
+            <ul class="mobile-menu-list">
+                <li><a href="#hero" class="mobile-nav-link active" data-section="hero" role="menuitem">Início</a></li>
+                <li><a href="#about" class="mobile-nav-link" data-section="about" role="menuitem">Sobre</a></li>
+                <li><a href="#experience" class="mobile-nav-link" data-section="experience"
+                        role="menuitem">Experiência</a></li>
+                <li><a href="#projects" class="mobile-nav-link" data-section="projects" role="menuitem">Projetos</a>
+                </li>
+                <li><a href="#stacks" class="mobile-nav-link" data-section="stacks" role="menuitem">Stacks</a></li>
+                <li><a href="#education" class="mobile-nav-link" data-section="education" role="menuitem">Formação</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="pt-16">
-        <!-- Home Page -->
-        <section id="home-page" class="page-content">
-            <div class="relative min-h-screen flex items-center justify-center overflow-hidden">
-                <!-- Background Image -->
-                <div class="absolute inset-0 z-0">
-                    <div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-accent/20"></div>
-                    <div class="absolute inset-0 tech-pattern opacity-10"></div>
+    <!-- ═══════════ MAIN CONTENT ═══════════ -->
+    <main>
+        <!-- ── HERO ── -->
+        <section class="hero" id="hero" aria-label="Apresentação">
+            <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    Disponível para projetos
                 </div>
 
-                <!-- Hero Content -->
-                <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-                    <div class="animate-fade-in">
-                        <h1 class=" hero-title">
-                            Desenvolvedor Full Stack
-                        </h1>
-                        <p class="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                            Criando soluções tecnológicas inovadoras com paixão e expertise em desenvolvimento web
-                            moderno
-                        </p>
+                <p class="hero-greeting">Olá, eu sou</p>
 
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                            <button class="btn-primary group" data-page="projects">
-                                <span>Ver Projetos</span>
-                                <i data-lucide="arrow-right"
-                                    class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"></i>
-                            </button>
-                            <button class="btn-secondary" data-page="about">
-                                <span>Sobre Mim</span>
-                            </button>
-                        </div>
+                <h1 class="hero-title">
+                    Desenvolvedor<br>
+                    <span class="hero-title-gradient">Full Stack</span>
+                </h1>
 
-                        <!-- Stats -->
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-                            <div class="text-center">
-                                <div class="text-3xl font-bold text-primary mb-2">15+</div>
-                                <div class="text-muted-foreground">Projetos Concluídos</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-3xl font-bold text-primary mb-2">3+</div>
-                                <div class="text-muted-foreground">Anos de Experiência</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-3xl font-bold text-primary mb-2">17+</div>
-                                <div class="text-muted-foreground">Tecnologias</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <p class="hero-subtitle">
+                    Bacharel em Sistemas de Informação construindo arquiteturas escaláveis de ponta a ponta: ecossistema
+                    Web (Vue, Nuxt, Node.js, NestJS, PHP, Laravel) e Mobile nativo iOS (Swift & SwiftUI).
+                </p>
 
-                <!-- Scroll Indicator -->
-                <!-- <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-                    <i data-lucide="chevron-down" class="h-6 w-6 text-muted-foreground"></i>
-                </div> -->
-            </div>
-        </section>
-
-        <!-- About Page -->
-        <section id="about-page" class="page-content hidden">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <div class="text-center mb-16">
-                    <h2
-                        class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <i data-lucide="arrow-right"></i>
+                        Ver Projetos
+                    </a>
+                    <a href="#experience" class="btn btn-secondary">
+                        <i data-lucide="briefcase"></i>
+                        Experiência
+                    </a>
+                    <a href="#about" class="btn btn-outline">
                         Sobre Mim
-                    </h2>
-                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Desenvolvedor apaixonado por tecnologia, sempre em busca de criar soluções inovadoras
-                    </p>
+                    </a>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
-                    <div class="space-y-6">
-                        <h3 class="text-2xl font-semibold mb-4">Minha História</h3>
-                        <p class="text-muted-foreground leading-relaxed">
-                            Começei minha jornada na programação aos 18 anos, fascinado pela possibilidade de criar
-                            soluções digitais. Desde então, tenho me dedicado ao desenvolvimento web full stack,
-                            sempre buscando as melhores práticas e tecnologias mais modernas.
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value" data-count="20">0</div>
+                        <div class="hero-stat-label">Projetos & Módulos</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value" data-count="4">0</div>
+                        <div class="hero-stat-label">Anos de Experiência</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value" data-count="25">0</div>
+                        <div class="hero-stat-label">Tecnologias & Ferramentas</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator" aria-hidden="true">
+                <span>scroll</span>
+                <i data-lucide="chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- ── ABOUT ── -->
+        <section class="section" id="about" aria-labelledby="about-title">
+            <div class="section-inner">
+                <div class="section-header reveal">
+                    <span class="section-label">Sobre mim</span>
+                    <h2 class="section-title" id="about-title">Quem sou <span class="gradient-text">eu</span></h2>
+                    <p class="section-desc">Desenvolvedor Full Stack & Bacharel em Sistemas de Informação focado em
+                        arquitetura, performance e visão sistêmica</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <h3>Minha Trajetória</h3>
+                        <p>
+                            Sou Bacharel em Sistemas de Informação e Desenvolvedor Full Stack com sólida experiência na
+                            concepção, desenvolvimento e sustentação de soluções web e mobile completas. Minha atuação é
+                            guiada por princípios de arquitetura limpa, alta performance e visão sistêmica do negócio.
                         </p>
-                        <p class="text-muted-foreground leading-relaxed">
-                            Atualmente trabalho com Php, Node.js, Swift, TypeScript e outras tecnologias do ecossistema
-                            JavaScript, sempre focado em criar experiências de usuário excepcionais e código limpo.
+                        <p>
+                            Possuo ampla vivência nos ecossistemas <strong>JavaScript/TypeScript</strong> e
+                            <strong>PHP</strong> (Vue, Nuxt, NestJS, Node.js, Laravel, WordPress), aliada a expertise em
+                            <strong>desenvolvimento mobile nativo iOS</strong> (Swift, UIKit, SwiftUI, Alamofire). Além
+                            disso, tenho histórico comprovado em integração de gateways de pagamento, modelagem de
+                            bancos SQL e atuação estratégica como Product Owner.
                         </p>
+
+                        <div class="about-chips">
+                            <div class="about-chip">
+                                <i data-lucide="map-pin"></i>
+                                <span><strong>Localização:</strong> Maceió, AL — Brasil</span>
+                            </div>
+                            <div class="about-chip">
+                                <i data-lucide="graduation-cap"></i>
+                                <span><strong>Graduação:</strong> Sistemas de Informação (Estácio)</span>
+                            </div>
+                            <div class="about-chip">
+                                <i data-lucide="languages"></i>
+                                <span><strong>Idiomas:</strong> Português (Nativo) • Inglês</span>
+                            </div>
+                            <div class="about-chip">
+                                <i data-lucide="layers"></i>
+                                <span><strong>Frentes:</strong> Web Full Stack • Mobile iOS • PO</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="card p-6">
-                            <i data-lucide="code" class="h-8 w-8 text-primary mb-4"></i>
-                            <h4 class="font-semibold mb-2">Clean Code</h4>
-                            <p class="text-sm text-muted-foreground">Código limpo e bem documentado</p>
+                    <div class="about-cards">
+                        <div class="card about-card reveal">
+                            <div class="card-body">
+                                <div class="about-card-icon"><i data-lucide="code"></i></div>
+                                <h4>Clean Code & POO</h4>
+                                <p>Arquitetura sólida, padrões de projeto e documentação técnica</p>
+                            </div>
                         </div>
-                        <div class="card p-6">
-                            <i data-lucide="zap" class="h-8 w-8 text-primary mb-4"></i>
-                            <h4 class="font-semibold mb-2">Performance</h4>
-                            <p class="text-sm text-muted-foreground">Otimização e alta performance</p>
+                        <div class="card about-card reveal">
+                            <div class="card-body">
+                                <div class="about-card-icon"><i data-lucide="zap"></i></div>
+                                <h4>Performance & APIs</h4>
+                                <p>Sistemas resilientes, cache, microsserviços e gateways seguros</p>
+                            </div>
                         </div>
-                        <div class="card p-6">
-                            <i data-lucide="users" class="h-8 w-8 text-primary mb-4"></i>
-                            <h4 class="font-semibold mb-2">Colaboração</h4>
-                            <p class="text-sm text-muted-foreground">Trabalho em equipe e metodologias ágeis</p>
+                        <div class="card about-card reveal">
+                            <div class="card-body">
+                                <div class="about-card-icon"><i data-lucide="smartphone"></i></div>
+                                <h4>Mobile iOS Nativo</h4>
+                                <p>Apps fluidos com Swift, SwiftUI, UIKit e boas práticas Apple</p>
+                            </div>
                         </div>
-                        <div class="card p-6">
-                            <i data-lucide="lightbulb" class="h-8 w-8 text-primary mb-4"></i>
-                            <h4 class="font-semibold mb-2">Inovação</h4>
-                            <p class="text-sm text-muted-foreground">Sempre buscando soluções criativas</p>
+                        <div class="card about-card reveal">
+                            <div class="card-body">
+                                <div class="about-card-icon"><i data-lucide="users"></i></div>
+                                <h4>Visão de Produto</h4>
+                                <p>Experiência como PO aliando metas de negócio e engenharia</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Page -->
-        <section id="projects-page" class="page-content hidden">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <div class="text-center mb-16">
-                    <h2
-                        class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                        Meus Projetos
-                    </h2>
-                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Uma seleção dos meus trabalhos mais relevantes e impactantes
-                    </p>
+        <!-- ── EXPERIENCE ── -->
+        <section class="section" id="experience" aria-labelledby="experience-title">
+            <div class="section-inner">
+                <div class="section-header reveal">
+                    <span class="section-label">Carreira</span>
+                    <h2 class="section-title" id="experience-title">Experiência <span
+                            class="gradient-text">Profissional</span></h2>
+                    <p class="section-desc">Minha trajetória prática construindo sistemas escaláveis, gateways de
+                        pagamento e liderando entregas ágeis</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
-                    <div class="project-card group">
-                        <div
-                            class="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg mb-4 flex items-center justify-center">
-                            <!-- <i data-lucide="smartphone" class="h-12 w-12 text-primary"></i> -->
-                            <img src="./assets/imgs/beatten.png" alt="BeattenGames Screenshot"
-                                class="lightbox-trigger cursor-pointer">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">BeattenGames</h3>
-                        <p class="text-muted-foreground mb-4">
-                            Plataforma de gerenciamento de video games com interface moderna, intuitiva e utilizando IA
-                            para servir como base de dados para gerar perguntas e respostas para a historia do jogo.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">NestJs</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Mysql</span>
-                        </div>
-                        <div class="flex gap-2">
-                            <a href="https://beattengames.com.br/" target="_blank" class="btn-sm">
-                                <i data-lucide="external-link" class="h-4 w-4 mr-1"></i>
-                                Visitar site
-                            </a>
-                            <button class="btn-sm btn-sm btn-outline cursor-not-allowed" disabled>
-                                <i data-lucide="github" class="h-4 w-4 mr-1"></i>
-                                Code
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="project-card group">
-                        <div
-                            class="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg mb-4 flex items-center justify-center">
-                            <!-- <i data-lucide="smartphone" class="h-12 w-12 text-primary"></i> -->
-                            <img src="./assets/imgs/site_corretora.png" alt="Site Corretora Screenshot"
-                                class="lightbox-trigger cursor-pointer">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Site Corretora</h3>
-                        <p class="text-muted-foreground mb-4">
-                            Site para corretora de imóveis com interface moderna e intuitiva.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">Wordpress</span>
-                            <span class="tech-tag">Php</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Mysql</span>
-                        </div>
-                        <div class="flex gap-2">
-                            <a href="https://reginasouzacorretora.com" target="_blank" class="btn-sm">
-                                <i data-lucide="external-link" class="h-4 w-4 mr-1"></i>
-                                Visitar site
-                            </a>
-                            <button class="btn-sm btn-sm btn-outline cursor-not-allowed" disabled>
-                                <i data-lucide="github" class="h-4 w-4 mr-1"></i>
-                                Code
-                            </button>
+                <div class="timeline">
+                    <!-- Mesha - Desenvolvedor Fullstack -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="timeline-header">
+                                    <span class="timeline-company-badge">
+                                        <i data-lucide="building-2"></i> Mesha Tecnologia
+                                    </span>
+                                    <span class="timeline-badge-current">
+                                        <span class="hero-badge-dot"></span> Ago. 2022 — Atual
+                                    </span>
+                                </div>
+                                <h3 style="margin-top: 0.5rem;">Desenvolvedor Fullstack</h3>
+                                <p class="timeline-org">Engenharia de Software • Backend & APIs</p>
+                                <ul class="timeline-bullets">
+                                    <li>Desenvolvimento e manutenção de soluções backend robustas com Node.js,
+                                        TypeScript, NestJS, PHP e WordPress, garantindo a evolução contínua de
+                                        microsserviços e APIs RESTful de alta disponibilidade.</li>
+                                    <li>Implementação e integração crítica de gateways e APIs de pagamento (transações
+                                        seguras, conciliação e regras de negócio com instituições financeiras e
+                                        adquirentes).</li>
+                                    <li>Arquitetura de software, otimização de performance e integrações complexas de
+                                        ponta a ponta (bancos relacionais, cache, camada de API e interfaces de
+                                        usuário).</li>
+                                    <li>Atuação direta em suporte especializado, sustentação operacional e resolução
+                                        ágil de incidentes em ambiente de produção.</li>
+                                </ul>
+                                <div class="timeline-tags">
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">TypeScript</span>
+                                    <span class="tech-tag">NestJS</span>
+                                    <span class="tech-tag">PHP</span>
+                                    <span class="tech-tag">Laravel</span>
+                                    <span class="tech-tag">WordPress</span>
+                                    <span class="tech-tag">Gateways de Pagamento</span>
+                                    <span class="tech-tag">MySQL</span>
+                                    <span class="tech-tag">Redis</span>
+                                    <span class="tech-tag">Docker</span>
+                                    <span class="tech-tag">APIs RESTful</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-
-                    <div class="project-card group">
-                        <div
-                            class="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg mb-4 flex items-center justify-center">
-                            <!-- <i data-lucide="smartphone" class="h-12 w-12 text-primary"></i> -->
-                            <img src="./assets/imgs/clube_role.png" alt="Clube Role Screenshot"
-                                class="lightbox-trigger cursor-pointer">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Clube Role</h3>
-                        <p class="text-muted-foreground mb-4">
-                            Somos um aplicativo dedicado a revelar o melhor do Brasil, conectando pessoas a lugares
-                            incríveis que merecem ser descobertos. Nosso objetivo é facilitar a busca por destinos
-                            especiais, experiências únicas e ambientes acolhedores, ajudando você a encontrar bons
-                            locais para visitar em qualquer região do país
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">NestJS</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Mysql</span>
-                        </div>
-                        <!-- div informando que tem app para android e ios -->
-                        <div class="flex gap-2">
-                            <span class="tech-tag">Android</span>
-                            <span class="tech-tag">iOS</span>
-                        </div>
-                        <div class="flex gap-2">
-                            <a href="https://reginasouzacorretora.com" target="_blank" class="btn-sm">
-                                <i data-lucide="external-link" class="h-4 w-4 mr-1"></i>
-                                Visitar site
-                            </a>
-                            <button class="btn-sm btn-sm btn-outline cursor-not-allowed" disabled>
-                                <i data-lucide="github" class="h-4 w-4 mr-1"></i>
-                                Code
-                            </button>
+                    <!-- Mesha - Product Owner -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="timeline-header">
+                                    <span class="timeline-company-badge">
+                                        <i data-lucide="briefcase"></i> Mesha Tecnologia
+                                    </span>
+                                    <span class="timeline-date" style="margin-bottom: 0;">Mar. 2024 — Mai. 2025</span>
+                                </div>
+                                <h3 style="margin-top: 0.5rem;">Product Owner</h3>
+                                <p class="timeline-org">Gestão de Produto • Liderança Ágil</p>
+                                <ul class="timeline-bullets">
+                                    <li>Priorização estratégica de demandas técnicas e funcionais, estabelecendo a ponte
+                                        entre visão de negócio e viabilidade de engenharia.</li>
+                                    <li>Refinamento de requisitos técnicos, gestão de backlog ágil (Scrum/Kanban) e
+                                        alinhamento contínuo entre stakeholders e desenvolvedores para garantir entregas
+                                        pontuais e de alto valor.</li>
+                                </ul>
+                                <div class="timeline-tags">
+                                    <span class="tech-tag">Product Ownership</span>
+                                    <span class="tech-tag">Metodologias Ágeis</span>
+                                    <span class="tech-tag">Gestão de Backlog</span>
+                                    <span class="tech-tag">Arquitetura de Requisitos</span>
+                                    <span class="tech-tag">Comunicação Interdisciplinar</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-
-
-                    <!-- Project 2 -->
-                    <div class="project-card group">
-                        <div
-                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <img src="./assets/imgs/senai.png" alt="BeattenGames Screenshot"
-                                class="lightbox-trigger cursor-pointer">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Senai-AL(Woocommerce - 2024)</h3>
-                        <p class="text-muted-foreground mb-4">
-                            Plataforma completa de e-commerce com painel administrativo e integração de pagamentos.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">Wordpress</span>
-                            <span class="tech-tag">Php</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Mysql</span>
-                        </div>
-                        <div class="flex gap-2">
-                            <a href="https://al.senai.br/" target="_blank" class="btn-sm">
-                                <i data-lucide="external-link" class="h-4 w-4 mr-1"></i>
-                                Visitar site
-                            </a>
-                            <button class="btn-sm btn-outline cursor-not-allowed" disabled>
-                                <i data-lucide="github" class="h-4 w-4 mr-1"></i>
-                                Code
-                            </button>
-
-                        </div>
-                    </div>
-
-                    <div class="project-card group">
-                        <div
-                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <img src="./assets/imgs/senai25.png" alt="BeattenGames Screenshot"
-                                class="lightbox-trigger cursor-pointer">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Senai-AL(Woocommerce - 2025)</h3>
-                        <p class="text-muted-foreground mb-4">
-                            Plataforma completa de e-commerce com painel administrativo e integração de pagamentos.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">Wordpress</span>
-                            <span class="tech-tag">Php</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Mysql</span>
-                        </div>
-                        <div class="flex gap-2">
-                            <a href="https://al.senai.br/" target="_blank" class="btn-sm">
-                                <i data-lucide="external-link" class="h-4 w-4 mr-1"></i>
-                                Visitar site
-                            </a>
-                            <button class="btn-sm btn-outline cursor-not-allowed" disabled>
-                                <i data-lucide="github" class="h-4 w-4 mr-1"></i>
-                                Code
-                            </button>
-
+                    <!-- SESI/FIEA - Dev -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="timeline-header">
+                                    <span class="timeline-company-badge">
+                                        <i data-lucide="factory"></i> SESI / FIEA
+                                    </span>
+                                    <span class="timeline-date" style="margin-bottom: 0;">Ago. 2020 — Ago. 2022</span>
+                                </div>
+                                <h3 style="margin-top: 0.5rem;">Desenvolvedor de Software (Dev - Fiea)</h3>
+                                <p class="timeline-org">Serviço Social da Indústria • Federação das Indústrias do Estado
+                                    de Alagoas</p>
+                                <ul class="timeline-bullets">
+                                    <li>Atuação no ciclo completo de desenvolvimento e manutenção de sistemas
+                                        corporativos, portais institucionais e plataformas educacionais.</li>
+                                    <li>Mapeamento de processos da indústria e tradução em soluções técnicas confiáveis,
+                                        integradas com bancos de dados relacionais e serviços corporativos.</li>
+                                </ul>
+                                <div class="timeline-tags">
+                                    <span class="tech-tag">PHP</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">MySQL</span>
+                                    <span class="tech-tag">Sistemas Corporativos</span>
+                                    <span class="tech-tag">FIEA-AL</span>
+                                    <span class="tech-tag">Arquitetura MVC</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Project 2 -->
-                    <div class="project-card group">
-                        <div
-                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <img src="./assets/imgs/fiea.png" alt="BeattenGames Screenshot"
-                                class="lightbox-trigger cursor-pointer">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Fiea-AL(2024)</h3>
-                        <p class="text-muted-foreground mb-4">
-                            Site institucional com painel administrativo com facilidade para alimentação de conteudo.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">Wordpress</span>
-                            <span class="tech-tag">Php</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Mysql</span>
-                        </div>
-                        <div class="flex gap-2">
-                            <a href="https://fiea.com.br/" target="_blank" class="btn-sm">
-                                <i data-lucide="external-link" class="h-4 w-4 mr-1"></i>
-                                Visitar site
-                            </a>
-                            <button class="btn-sm btn-outline cursor-not-allowed" disabled>
-                                <i data-lucide="github" class="h-4 w-4 mr-1"></i>
-                                Code
-                            </button>
-
-                        </div>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-card group">
-                        <div
-                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <img src="./assets/imgs/sesi.png" alt="BeattenGames Screenshot"
-                                class="lightbox-trigger cursor-pointer">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Sesi-AL(2024)</h3>
-                        <p class="text-muted-foreground mb-4">
-                            Site institucional com painel administrativo com facilidade para alimentação de conteudo.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">Wordpress</span>
-                            <span class="tech-tag">Php</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Mysql</span>
-                        </div>
-                        <div class="flex gap-2">
-                            <a href="https://al.sesi.com.br/" target="_blank" class="btn-sm">
-                                <i data-lucide="external-link" class="h-4 w-4 mr-1"></i>
-                                Visitar site
-                            </a>
-                            <button class="btn-sm btn-outline cursor-not-allowed" disabled>
-                                <i data-lucide="github" class="h-4 w-4 mr-1"></i>
-                                Code
-                            </button>
-
+                    <!-- SESI - Suporte TI -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="timeline-header">
+                                    <span class="timeline-company-badge">
+                                        <i data-lucide="shield-check"></i> SESI - Serviço Social da Indústria
+                                    </span>
+                                    <span class="timeline-date" style="margin-bottom: 0;">Ago. 2021 — Ago. 2022</span>
+                                </div>
+                                <h3 style="margin-top: 0.5rem;">Suporte a TI</h3>
+                                <p class="timeline-org">Operação & Infraestrutura de TI</p>
+                                <ul class="timeline-bullets">
+                                    <li>Suporte técnico a usuários, diagnóstico e resolução de incidentes de hardware,
+                                        redes e sistemas corporativos.</li>
+                                    <li>Garantia de estabilidade operacional, atendimento a SLAs rigorosos e apoio
+                                        direto à infraestrutura tecnológica.</li>
+                                </ul>
+                                <div class="timeline-tags">
+                                    <span class="tech-tag">Suporte Técnico</span>
+                                    <span class="tech-tag">Infraestrutura</span>
+                                    <span class="tech-tag">Redes</span>
+                                    <span class="tech-tag">Gestão de Incidentes</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-card group">
-                        <div
-                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <img src="./assets/imgs/intranet.png" alt="BeattenGames Screenshot"
-                                class="lightbox-trigger cursor-pointer">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Portal do Colaborador(FIEA-AL - 2024)</h3>
-                        <p class="text-muted-foreground mb-4">
-                            Plataforma de intranet com painel administrativo com facilidade para alimentação de
-                            conteudo.
-                        </p>
-                        <!-- text warning -->
-                        <p class="text-sm tag-warning">Projeto interno da empresa</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">Wordpress</span>
-                            <span class="tech-tag">Php</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Mysql</span>
-                        </div>
-                        <div class="flex gap-2">
-                            <button class="btn-sm bg-gray-600 cursor-not-allowed hover:bg-gray-600" disabled>
-                                <i data-lucide="external-link" class="h-4 w-4 mr-1"></i>
-                                Indisponível
-                            </button>
-                            <button class="btn-sm btn-outline cursor-not-allowed" disabled>
-                                <i data-lucide="github" class="h-4 w-4 mr-1"></i>
-                                Code
-                            </button>
-
-                        </div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="project-card group">
-                        <div
-                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <img src="./assets/imgs/reconhecimento.png" alt="BeattenGames Screenshot"
-                                class="lightbox-trigger cursor-pointer">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Reconhecimento Facial</h3>
-                        <p class="text-muted-foreground mb-4">
-                            Sistema de reconhecimento facial com interface intuitiva e funcionalidade avançada com azure
-                            para localizar seu rosto na imagem com diversas pessoas(ex: em eventos, etc).
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">Php</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Mysql</span>
-                        </div>
-                        <div class="flex gap-2">
-                            <button class="btn-sm bg-gray-600 cursor-not-allowed hover:bg-gray-600" disabled>
-                                <i data-lucide="external-link" class="h-4 w-4 mr-1"></i>
-                                Indisponível
-                            </button>
-                            <button class="btn-sm btn-outline cursor-not-allowed" disabled>
-                                <i data-lucide="github" class="h-4 w-4 mr-1"></i>
-                                Code
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-card group">
-                        <div
-                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <i data-lucide="globe" class="h-12 w-12 text-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">E-commerce Plataforma</h3>
-                        <p class="text-muted-foreground mb-4">
-                            Plataforma completa de e-commerce com painel administrativo e integração de pagamentos.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">Wordpress</span>
-                            <span class="tech-tag">Php</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Mysql</span>
-                        </div>
-                        <div class="flex gap-2">
-                            <button class="btn-sm bg-gray-600 cursor-not-allowed hover:bg-gray-600" disabled>
-                                <i data-lucide="external-link" class="h-4 w-4 mr-1"></i>
-                                Indisponível
-                            </button>
-                            <button class="btn-sm btn-outline cursor-not-allowed" disabled>
-                                <i data-lucide="github" class="h-4 w-4 mr-1"></i>
-                                Code
-                            </button>
-
-                        </div>
-                    </div>
-
-                    <div class="project-card group">
-                        <div
-                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <i data-lucide="bar-chart" class="h-12 w-12 text-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Viagens(Copy Booking)</h3>
-                        <p class="text-muted-foreground mb-4">
-                            Aplicativo IOS com interface intuitiva com intuito de duplicar o layout de uma agencia de
-                            viagens
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">SwiftUIKit</span>
-                        </div>
-                        <div class="flex gap-2">
-                            <button class="btn-sm bg-gray-600 cursor-not-allowed hover:bg-gray-600" disabled>
-                                <i data-lucide="external-link" class="h-4 w-4 mr-1"></i>
-                                Indisponível
-                            </button>
-                            <button class="btn-sm btn-outline cursor-not-allowed" disabled>
-                                <i data-lucide="github" class="h-4 w-4 mr-1"></i>
-                                Code
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="project-card group">
-                        <div
-                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <i data-lucide="bar-chart" class="h-12 w-12 text-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">PetsShop Agenda</h3>
-                        <p class="text-muted-foreground mb-4">
-                            Aplicativo IOS com interface intuitiva com intuito de colocar em pratica os conhecimentos
-                            adquiridos, um agendador de consultas
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">SwiftUI</span>
-                        </div>
-                        <div class="flex gap-2">
-                            <a href="https://www.linkedin.com/posts/italogabrielsantostavares_quero-compartilhar-um-pequeno-marco-pessoal-activity-7419745702165164033-YIxG?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAyCLQBYIRx3Uv3b-XYoqPMsYAILKOVXr8"
-                                target="_blank" class="btn-sm">
-                                <i data-lucide="external-link" class="h-4 w-4 mr-1"></i>
-                                Visitar site
-                            </a>
-                            <button class="btn-sm btn-outline cursor-not-allowed" disabled>
-                                <i data-lucide="github" class="h-4 w-4 mr-1"></i>
-                                Code
-                            </button>
-                        </div>
-                    </div>
-
-                    <div id="lightbox-overlay" class="hidden">
-                        <span id="lightbox-close">&times;</span>
-                        <img id="lightbox-image" src="" alt="Imagem em tela cheia">
-                    </div>
-
-                </div>
-            </div>
-
-
-            <div class="border-t border-border mt-8 pt-8"></div>
-
-
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <div class="text-center mb-16">
-                    <h2
-                        class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                        Meus Plugins
-                    </h2>
-                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Uma seleção dos meus plugins do wordpress mais relevantes
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
-                    <div class="project-card group">
-                        <div
-                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <i data-lucide="globe" class="h-12 w-12 text-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Gateway do PIX(Banco do Brasil)</h3>
-                        <p class="text-muted-foreground mb-4">
-                            Gateway do PIX(Banco do Brasil) com interface intuitiva, verificação automatica de pagamento
-                            e alteração de status no woocommerce.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">Wordpress</span>
-                            <span class="tech-tag">Php</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Mysql</span>
-                        </div>
-
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-card group">
-                        <div
-                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <i data-lucide="globe" class="h-12 w-12 text-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Gateway de Boleto(Banco do Brasil)</h3>
-                        <p class="text-muted-foreground mb-4">
-                            Gateway do Boleto(Banco do Brasil) com interface intuitiva, verificação automatica de
-                            pagamento e alteração de status no woocommerce.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">Wordpress</span>
-                            <span class="tech-tag">Php</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Mysql</span>
-                        </div>
-
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="project-card group">
-                        <div
-                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <i data-lucide="bar-chart" class="h-12 w-12 text-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Gateway de Dois Cartões(E-rede)</h3>
-                        <p class="text-muted-foreground mb-4">
-                            Gateway de Dois Cartões(E-rede) realizei uma estrutura de contorno e foi desenvolvido o
-                            gateway que utiliza dois cartões com verificação automatica de pagamento e alteração de
-                            status no woocommerce.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">Wordpress</span>
-                            <span class="tech-tag">Php</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Mysql</span>
-                        </div>
-
-                    </div>
-
-                    <div class="project-card group">
-                        <div
-                            class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                            <i data-lucide="bar-chart" class="h-12 w-12 text-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Enquete Institucional</h3>
-                        <p class="text-muted-foreground mb-4">
-                            Enquete Institucional com Dashboard interativo para visualização de dados e métricas em
-                            tempo real
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">Mysql</span>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- Stacks Page -->
-        <section id="stacks-page" class="page-content hidden">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <div class="text-center mb-16">
-                    <h2
-                        class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                        Tecnologias
-                    </h2>
-                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        As ferramentas e tecnologias que domino para criar soluções completas
-                    </p>
+        <!-- ── PROJECTS ── -->
+        <section class="section" id="projects" aria-labelledby="projects-title">
+            <div class="section-inner">
+                <div class="section-header reveal">
+                    <span class="section-label">Portfólio</span>
+                    <h2 class="section-title" id="projects-title">Meus <span class="gradient-text">Projetos</span></h2>
+                    <p class="section-desc">Uma seleção dos meus trabalhos mais relevantes e impactantes</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="projects-grid">
+                    <!-- BeattenGames -->
+                    <div class="card project-card reveal">
+                        <div class="project-img">
+                            <img src="./assets/imgs/beatten.png" alt="BeattenGames Screenshot" class="lightbox-trigger"
+                                loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3>BeattenGames</h3>
+                            <p>Plataforma de gerenciamento de video games com interface moderna, intuitiva e utilizando
+                                IA para gerar perguntas sobre a história do jogo.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">NestJs</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://beattengames.com.br/" target="_blank" rel="noopener"
+                                    class="btn btn-sm btn-primary">
+                                    <i data-lucide="external-link"></i> Visitar
+                                </a>
+                                <button class="btn btn-sm btn-outline btn-disabled" disabled>
+                                    <i data-lucide="github"></i> Code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Senai 2024 -->
+                    <div class="card project-card reveal">
+                        <div class="project-img">
+                            <img src="./assets/imgs/senai.png" alt="Senai-AL Screenshot" class="lightbox-trigger"
+                                loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3>Senai-AL (Woocommerce - 2024)</h3>
+                            <p>Plataforma completa de e-commerce com painel administrativo e integração de pagamentos.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">WordPress</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://al.senai.br/" target="_blank" rel="noopener"
+                                    class="btn btn-sm btn-primary">
+                                    <i data-lucide="external-link"></i> Visitar
+                                </a>
+                                <button class="btn btn-sm btn-outline btn-disabled" disabled>
+                                    <i data-lucide="github"></i> Code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Senai 2025 -->
+                    <div class="card project-card reveal">
+                        <div class="project-img">
+                            <img src="./assets/imgs/senai25.png" alt="Senai-AL 2025 Screenshot" class="lightbox-trigger"
+                                loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3>Senai-AL (Woocommerce - 2025)</h3>
+                            <p>Plataforma completa de e-commerce com painel administrativo e integração de pagamentos.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">WordPress</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://al.senai.br/" target="_blank" rel="noopener"
+                                    class="btn btn-sm btn-primary">
+                                    <i data-lucide="external-link"></i> Visitar
+                                </a>
+                                <button class="btn btn-sm btn-outline btn-disabled" disabled>
+                                    <i data-lucide="github"></i> Code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FIEA -->
+                    <div class="card project-card reveal">
+                        <div class="project-img">
+                            <img src="./assets/imgs/fiea.png" alt="FIEA-AL Screenshot" class="lightbox-trigger"
+                                loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3>Fiea-AL (2024)</h3>
+                            <p>Site institucional com painel administrativo com facilidade para alimentação de conteúdo.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">WordPress</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://fiea.com.br/" target="_blank" rel="noopener"
+                                    class="btn btn-sm btn-primary">
+                                    <i data-lucide="external-link"></i> Visitar
+                                </a>
+                                <button class="btn btn-sm btn-outline btn-disabled" disabled>
+                                    <i data-lucide="github"></i> Code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SESI -->
+                    <div class="card project-card reveal">
+                        <div class="project-img">
+                            <img src="./assets/imgs/sesi.png" alt="Sesi-AL Screenshot" class="lightbox-trigger"
+                                loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3>Sesi-AL (2024)</h3>
+                            <p>Site institucional com painel administrativo com facilidade para alimentação de conteúdo.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">WordPress</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://al.sesi.com.br/" target="_blank" rel="noopener"
+                                    class="btn btn-sm btn-primary">
+                                    <i data-lucide="external-link"></i> Visitar
+                                </a>
+                                <button class="btn btn-sm btn-outline btn-disabled" disabled>
+                                    <i data-lucide="github"></i> Code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portal do Colaborador -->
+                    <div class="card project-card reveal">
+                        <div class="project-img">
+                            <img src="./assets/imgs/intranet.png" alt="Portal do Colaborador Screenshot"
+                                class="lightbox-trigger" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3>Portal do Colaborador (FIEA-AL)</h3>
+                            <p>Plataforma de intranet com painel administrativo com facilidade para alimentação de
+                                conteúdo.</p>
+                            <span class="project-warning">Projeto interno da empresa</span>
+                            <div class="tech-tags">
+                                <span class="tech-tag">WordPress</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-sm btn-outline btn-disabled" disabled>
+                                    <i data-lucide="external-link"></i> Indisponível
+                                </button>
+                                <button class="btn btn-sm btn-outline btn-disabled" disabled>
+                                    <i data-lucide="github"></i> Code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reconhecimento Facial -->
+                    <div class="card project-card reveal">
+                        <div class="project-img">
+                            <img src="./assets/imgs/reconhecimento.png" alt="Reconhecimento Facial Screenshot"
+                                class="lightbox-trigger" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3>Reconhecimento Facial</h3>
+                            <p>Sistema de reconhecimento facial com Azure para localizar rostos em imagens com diversas
+                                pessoas.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-sm btn-outline btn-disabled" disabled>
+                                    <i data-lucide="external-link"></i> Indisponível
+                                </button>
+                                <button class="btn btn-sm btn-outline btn-disabled" disabled>
+                                    <i data-lucide="github"></i> Code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E-commerce -->
+                    <div class="card project-card reveal">
+                        <div class="project-img">
+                            <div class="project-img-placeholder"></div>
+                            <i data-lucide="globe"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>E-commerce Plataforma</h3>
+                            <p>Plataforma completa de e-commerce com painel administrativo e integração de pagamentos.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">WordPress</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-sm btn-outline btn-disabled" disabled>
+                                    <i data-lucide="external-link"></i> Indisponível
+                                </button>
+                                <button class="btn btn-sm btn-outline btn-disabled" disabled>
+                                    <i data-lucide="github"></i> Code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Viagens -->
+                    <div class="card project-card reveal">
+                        <div class="project-img">
+                            <div class="project-img-placeholder"></div>
+                            <i data-lucide="plane"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>Viagens (Copy Booking)</h3>
+                            <p>Aplicativo iOS com interface intuitiva duplicando o layout de uma agência de viagens.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">SwiftUIKit</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-sm btn-outline btn-disabled" disabled>
+                                    <i data-lucide="external-link"></i> Indisponível
+                                </button>
+                                <button class="btn btn-sm btn-outline btn-disabled" disabled>
+                                    <i data-lucide="github"></i> Code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plugins Section -->
+                <div class="section-divider" style="margin: 4rem 0;"></div>
+
+                <div class="section-header reveal">
+                    <span class="section-label">WordPress</span>
+                    <h2 class="section-title">Meus <span class="gradient-text">Plugins</span></h2>
+                    <p class="section-desc">Plugins WordPress desenvolvidos para soluções específicas</p>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="card project-card reveal">
+                        <div class="project-img">
+                            <div class="project-img-placeholder"></div><i data-lucide="credit-card"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>Gateway PIX (Banco do Brasil)</h3>
+                            <p>Gateway do PIX com verificação automática de pagamento e alteração de status no
+                                WooCommerce.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">WordPress</span><span class="tech-tag">PHP</span><span
+                                    class="tech-tag">JavaScript</span><span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card project-card reveal">
+                        <div class="project-img">
+                            <div class="project-img-placeholder"></div><i data-lucide="receipt"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>Gateway Boleto (Banco do Brasil)</h3>
+                            <p>Gateway de Boleto com verificação automática de pagamento e alteração de status no
+                                WooCommerce.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">WordPress</span><span class="tech-tag">PHP</span><span
+                                    class="tech-tag">JavaScript</span><span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card project-card reveal">
+                        <div class="project-img">
+                            <div class="project-img-placeholder"></div><i data-lucide="wallet"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>Gateway Dois Cartões (E-rede)</h3>
+                            <p>Gateway de dois cartões com verificação automática de pagamento e alteração de status no
+                                WooCommerce.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">WordPress</span><span class="tech-tag">PHP</span><span
+                                    class="tech-tag">JavaScript</span><span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card project-card reveal">
+                        <div class="project-img">
+                            <div class="project-img-placeholder"></div><i data-lucide="bar-chart-3"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>Enquete Institucional</h3>
+                            <p>Enquete Institucional com Dashboard interativo para visualização de dados e métricas em
+                                tempo real.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">JavaScript</span><span class="tech-tag">PHP</span><span
+                                    class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── STACKS ── -->
+        <section class="section" id="stacks" aria-labelledby="stacks-title">
+            <div class="section-inner">
+                <div class="section-header reveal">
+                    <span class="section-label">Tecnologias</span>
+                    <h2 class="section-title" id="stacks-title">Minhas <span class="gradient-text">Stacks</span></h2>
+                    <p class="section-desc">As ferramentas e tecnologias que domino para criar soluções completas</p>
+                </div>
+
+                <div class="stacks-grid">
+                    <!-- Mobile (iOS) -->
+                    <div class="card reveal">
+                        <div class="card-body">
+                            <div class="stack-card-header"><i data-lucide="smartphone"></i>
+                                <h3>Mobile (iOS)</h3>
+                            </div>
+                            <div class="stack-list">
+                                <div class="stack-item">Swift</div>
+                                <div class="stack-item">SwiftUI</div>
+                                <div class="stack-item">UIKit</div>
+                                <div class="stack-item">Xcode</div>
+                                <div class="stack-item">Alamofire</div>
+                                <div class="stack-item">CocoaPods / SPM</div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Frontend -->
-                    <div class="card p-6">
-                        <div class="flex items-center mb-4">
-                            <i data-lucide="monitor" class="h-6 w-6 text-primary mr-2"></i>
-                            <h3 class="text-xl font-semibold">Frontend</h3>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">Vue.js</span>
-                                </div>
+                    <div class="card reveal">
+                        <div class="card-body">
+                            <div class="stack-card-header"><i data-lucide="monitor"></i>
+                                <h3>Frontend</h3>
                             </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">Css</span>
-                                </div>
-                            </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">Scss</span>
-                                </div>
-                            </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">Angula</span>
-                                </div>
+                            <div class="stack-list">
+                                <div class="stack-item">Vue.js</div>
+                                <div class="stack-item">Nuxt.js</div>
+                                <div class="stack-item">React</div>
+                                <div class="stack-item">TypeScript</div>
+                                <div class="stack-item">JavaScript</div>
+                                <div class="stack-item">Tailwind CSS</div>
+                                <div class="stack-item">CSS / SASS</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Backend -->
-                    <div class="card p-6">
-                        <div class="flex items-center mb-4">
-                            <i data-lucide="server" class="h-6 w-6 text-primary mr-2"></i>
-                            <h3 class="text-xl font-semibold">Backend</h3>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">Node.js</span>
-                                </div>
+                    <div class="card reveal">
+                        <div class="card-body">
+                            <div class="stack-card-header"><i data-lucide="server"></i>
+                                <h3>Backend</h3>
                             </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">NestJs</span>
-                                </div>
-                            </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">Php</span>
-                                </div>
-                            </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">Swift</span>
-                                </div>
+                            <div class="stack-list">
+                                <div class="stack-item">Node.js</div>
+                                <div class="stack-item">NestJS</div>
+                                <div class="stack-item">PHP</div>
+                                <div class="stack-item">Laravel</div>
+                                <div class="stack-item">WordPress</div>
+                                <div class="stack-item">TypeORM</div>
+                                <div class="stack-item">APIs RESTful</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Databases -->
-                    <div class="card p-6">
-                        <div class="flex items-center mb-4">
-                            <i data-lucide="tool-case" class="h-6 w-6 text-primary mr-2"></i>
-                            <h3 class="text-xl font-semibold">Banco de Dados</h3>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">Mysql</span>
-                                </div>
+                    <!-- Banco de Dados -->
+                    <div class="card reveal">
+                        <div class="card-body">
+                            <div class="stack-card-header"><i data-lucide="database"></i>
+                                <h3>Banco de Dados</h3>
                             </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">SQL</span>
-                                </div>
+                            <div class="stack-list">
+                                <div class="stack-item">MySQL</div>
+                                <div class="stack-item">PostgreSQL</div>
+                                <div class="stack-item">SQL Server</div>
+                                <div class="stack-item">Redis</div>
                             </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">PostgreSQL</span>
-                                </div>
-                            </div>
-                            <!-- <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">AWS</span>
-                                    <span class="text-sm text-muted-foreground">70%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 70%"></div>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
 
-                    <!-- Tools -->
-                    <div class="card p-6">
-                        <div class="flex items-center mb-4">
-                            <i data-lucide="tool-case" class="h-6 w-6 text-primary mr-2"></i>
-                            <h3 class="text-xl font-semibold">Ferramentas</h3>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">Git/GitHub</span>
-                                </div>
+                    <!-- DevOps & Nuvem -->
+                    <div class="card reveal">
+                        <div class="card-body">
+                            <div class="stack-card-header"><i data-lucide="cloud"></i>
+                                <h3>DevOps & Cloud</h3>
                             </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">integrações SSO</span>
-                                </div>
+                            <div class="stack-list">
+                                <div class="stack-item">Docker</div>
+                                <div class="stack-item">CI / CD</div>
+                                <div class="stack-item">Microsoft Azure</div>
+                                <div class="stack-item">Git / GitHub</div>
+                                <div class="stack-item">n8n (Automação)</div>
                             </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">Docker</span>
-                                </div>
-                            </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">IA</span>
-                                </div>
-                            </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">Figma</span>
-                                </div>
-                            </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">N8n</span>
-                                </div>
-                            </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">Miro (Construção de Diagramas)</span>
-                                </div>
-                            </div>
-                            <!-- <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">AWS</span>
-                                    <span class="text-sm text-muted-foreground">70%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 70%"></div>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
 
-                    <!-- Tools -->
-                    <div class="card p-6">
-                        <div class="flex items-center mb-4">
-                            <i data-lucide="tool-case" class="h-6 w-6 text-primary mr-2"></i>
-                            <h3 class="text-xl font-semibold">Integrações</h3>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">Google</span>
-                                </div>
+                    <!-- Integrações & Produto -->
+                    <div class="card reveal">
+                        <div class="card-body">
+                            <div class="stack-card-header"><i data-lucide="plug"></i>
+                                <h3>Integrações & Produto</h3>
                             </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">GitHub</span>
-                                </div>
+                            <div class="stack-list">
+                                <div class="stack-item">Gateways de Pagamento</div>
+                                <div class="stack-item">IA (LLMs & APIs)</div>
+                                <div class="stack-item">Autenticação SSO</div>
+                                <div class="stack-item">Figma / UI Design</div>
+                                <div class="stack-item">Product Management</div>
                             </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">Steam</span>
-                                </div>
-                            </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">Banco do Brasil</span>
-                                </div>
-                            </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">IA</span>
-                                </div>
-                            </div>
-
-                            <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">Microsoft Azure</span>
-                                </div>
-                            </div>
-
-                            <!-- <div class="border-t border-border my-4"></div>
-
-                            <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">Miro (Construção de Diagramas)</span>
-                                </div>
-                            </div> -->
-                            <!-- <div class="skill-item">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium">AWS</span>
-                                    <span class="text-sm text-muted-foreground">70%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 70%"></div>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Education Page -->
-        <section id="education-page" class="page-content hidden">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <div class="text-center mb-16">
-                    <h2
-                        class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                        Formação
+        <!-- ── EDUCATION ── -->
+        <section class="section" id="education" aria-labelledby="education-title">
+            <div class="section-inner">
+                <div class="section-header reveal">
+                    <span class="section-label">Formação</span>
+                    <h2 class="section-title" id="education-title">Minha <span class="gradient-text">Formação</span>
                     </h2>
-                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Minha jornada acadêmica e profissional em tecnologia
-                    </p>
+                    <p class="section-desc">Minha formação acadêmica em tecnologia e certificações contínuas</p>
                 </div>
 
-                <div class="space-y-8">
-                    <!-- Academic Education -->
-                    <div class="card p-8">
-                        <div class="flex items-start space-x-4">
-                            <div class="flex-shrink-0">
-                                <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                                    <i data-lucide="graduation-cap" class="h-6 w-6 text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-xl font-semibold mb-2">Bacharelado em Sistemas de Informação</h3>
-                                <p class="text-accent font-medium mb-2">Faculdade Estácio de Alagoas</p>
-                                <p class="text-muted-foreground mb-4">2020 - 2024 • Completo</p>
-                                <p class="text-muted-foreground">
-                                    Conhecimento sólido em algoritmos e estruturas de dados,
-                                    complementado por expertise em engenharia de software,
-                                    banco de dados e arquitetura de sistemas.
-                                    Capacidade de integrar tecnologia e estratégia de negócios,
-                                    desenvolvendo soluções que otimizam operações e impulsionam o crescimento,
-                                    com participação ativa em projetos de inovação e pesquisa.
-                                </p>
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>Bacharelado em Sistemas de Informação</h3>
+                                <p class="timeline-org">Faculdade Estácio de Alagoas</p>
+                                <p class="timeline-date">2020 — 2024 • Graduado</p>
+                                <p>Sólida formação em engenharia de software, algoritmos e estruturas de dados,
+                                    modelagem de banco de dados, governança de TI e arquitetura de sistemas
+                                    corporativos, integrando visão técnica e estratégia de negócios.</p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Certifications -->
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="card p-6">
-                            <div class="flex items-center mb-4">
-                                <i data-lucide="award" class="h-5 w-5 text-primary mr-2"></i>
-                                <h3 class="font-semibold">APIs com Node.js e Express</h3>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>Tecnologia em Tecnologia da Informação</h3>
+                                <p class="timeline-org">Faculdade Estácio de Alagoas</p>
+                                <p class="timeline-date">2022 • Concluído</p>
+                                <p>Aprofundamento em fundamentos de redes de computadores, suporte operacional, sistemas
+                                    operacionais e arquitetura computacional.</p>
                             </div>
-                            <p class="text-sm text-muted-foreground mb-2">Alura</p>
-                            <p class="text-sm text-muted-foreground">2023</p>
                         </div>
-
-                        <div class="card p-6">
-                            <div class="flex items-center mb-4">
-                                <i data-lucide="award" class="h-5 w-5 text-primary mr-2"></i>
-                                <h3 class="font-semibold">Nest.js: aplicações Node.js eficientes e escaláveis do lado do
-                                    servidor</h3>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>Ensino Médio</h3>
+                                <p class="timeline-org">Colégio Santa Tereza</p>
+                                <p class="timeline-date">2019 • Concluído</p>
                             </div>
-                            <p class="text-sm text-muted-foreground mb-2">Alura</p>
-                            <p class="text-sm text-muted-foreground">2023</p>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="card p-6">
-                            <div class="flex items-center mb-4">
-                                <i data-lucide="award" class="h-5 w-5 text-primary mr-2"></i>
-                                <h3 class="font-semibold">Vue3</h3>
+                <div class="certs-grid" style="margin-top: 3rem;">
+                    <div class="card cert-card reveal">
+                        <div class="card-body">
+                            <div class="cert-icon"><i data-lucide="award"></i></div>
+                            <div class="cert-info">
+                                <h4>Swift (iOS)</h4><span>Alura • 2025</span>
                             </div>
-                            <p class="text-sm text-muted-foreground mb-2">Alura</p>
-                            <p class="text-sm text-muted-foreground">2022</p>
                         </div>
-
-                        <div class="card p-6">
-                            <div class="flex items-center mb-4">
-                                <i data-lucide="award" class="h-5 w-5 text-primary mr-2"></i>
-                                <h3 class="font-semibold">Wordpress</h3>
+                    </div>
+                    <div class="card cert-card reveal">
+                        <div class="card-body">
+                            <div class="cert-icon"><i data-lucide="award"></i></div>
+                            <div class="cert-info">
+                                <h4>Nest.js: Microsserviços & APIs</h4><span>Alura • 2023</span>
                             </div>
-                            <p class="text-sm text-muted-foreground mb-2">Alura</p>
-                            <p class="text-sm text-muted-foreground">2025</p>
                         </div>
-
-                        <div class="card p-6">
-                            <div class="flex items-center mb-4">
-                                <i data-lucide="award" class="h-5 w-5 text-primary mr-2"></i>
-                                <h3 class="font-semibold">Swift</h3>
+                    </div>
+                    <div class="card cert-card reveal">
+                        <div class="card-body">
+                            <div class="cert-icon"><i data-lucide="award"></i></div>
+                            <div class="cert-info">
+                                <h4>APIs com Node.js e Express</h4><span>Alura • 2023</span>
                             </div>
-                            <p class="text-sm text-muted-foreground mb-2">Alura</p>
-                            <p class="text-sm text-muted-foreground">2025</p>
                         </div>
-
-                        <div class="card p-6">
-                            <div class="flex items-center mb-4">
-                                <i data-lucide="award" class="h-5 w-5 text-primary mr-2"></i>
-                                <h3 class="font-semibold">Python</h3>
+                    </div>
+                    <div class="card cert-card reveal">
+                        <div class="card-body">
+                            <div class="cert-icon"><i data-lucide="award"></i></div>
+                            <div class="cert-info">
+                                <h4>Vue 3 Avançado</h4><span>Alura • 2022</span>
                             </div>
-                            <p class="text-sm text-muted-foreground mb-2">Alura</p>
-                            <p class="text-sm text-muted-foreground">2022</p>
                         </div>
-
-                        <div class="card p-6">
-                            <div class="flex items-center mb-4">
-                                <i data-lucide="award" class="h-5 w-5 text-primary mr-2"></i>
-                                <h3 class="font-semibold">Php(MVC)</h3>
+                    </div>
+                    <div class="card cert-card reveal">
+                        <div class="card-body">
+                            <div class="cert-icon"><i data-lucide="award"></i></div>
+                            <div class="cert-info">
+                                <h4>WordPress & WooCommerce</h4><span>Alura • 2025</span>
                             </div>
-                            <p class="text-sm text-muted-foreground mb-2">Alura</p>
-                            <p class="text-sm text-muted-foreground">2025</p>
+                        </div>
+                    </div>
+                    <div class="card cert-card reveal">
+                        <div class="card-body">
+                            <div class="cert-icon"><i data-lucide="award"></i></div>
+                            <div class="cert-info">
+                                <h4>PHP (Arquitetura MVC)</h4><span>Alura • 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card cert-card reveal">
+                        <div class="card-body">
+                            <div class="cert-icon"><i data-lucide="award"></i></div>
+                            <div class="cert-info">
+                                <h4>Python</h4><span>Alura • 2022</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1110,63 +975,58 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-card border-t border-border">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contato</h3>
-                    <div class="space-y-2">
-                        <a href="mailto:contato@devportfolio.com"
-                            class="flex items-center text-muted-foreground hover:text-primary transition-colors">
-                            <i data-lucide="mail" class="h-4 w-4 mr-2"></i>
-                            itarugabriel@gmail.com
-                        </a>
-                        <!-- text=olá, fiquei interessado sobre o seu trabalho -->
-                        <a href="https://wa.me/5582987117461?text=Ol%C3%A1,%20fiquei%20interessado%20sobre%20o%20seu%20trabalho"
-                            target="_blank"
-                            class="flex items-center text-muted-foreground hover:text-primary transition-colors">
-                            <i data-lucide="phone" class="h-4 w-4 mr-2"></i>
-                            +55 82 98711-7461
-                        </a>
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer" id="contact">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <a href="mailto:gabrielgg.tavares@gmail.com" class="footer-link">
+                        <i data-lucide="mail"></i>
+                        gabrielgg.tavares@gmail.com
+                    </a>
+                    <a href="mailto:itarugabriel@gmail.com" class="footer-link">
+                        <i data-lucide="mail"></i>
+                        itarugabriel@gmail.com
+                    </a>
+
+                    <div class="footer-link" style="margin-top: 0.5rem; color: var(--text-tertiary);">
+                        <i data-lucide="map-pin"></i>
+                        Maceió, Alagoas — Brasil
                     </div>
                 </div>
-
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Redes Sociais</h3>
-                    <div class="space-y-2">
-                        <a href="https://github.com/ItaloGabs"
-                            class="flex items-center text-muted-foreground hover:text-primary transition-colors">
-                            <i data-lucide="github" class="h-4 w-4 mr-2"></i>
-                            GitHub
-                        </a>
-                        <a href="https://www.linkedin.com/in/italogabrielsantostavares/"
-                            class="flex items-center text-muted-foreground hover:text-primary transition-colors">
-                            <i data-lucide="linkedin" class="h-4 w-4 mr-2"></i>
-                            LinkedIn
-                        </a>
-                    </div>
+                <div class="footer-col">
+                    <h3>Redes Sociais</h3>
+                    <a href="https://github.com/ItaloGabs" target="_blank" rel="noopener" class="footer-link">
+                        <i data-lucide="github"></i>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/italogabrielsantostavares/" target="_blank" rel="noopener"
+                        class="footer-link">
+                        <i data-lucide="linkedin"></i>
+                        LinkedIn
+                    </a>
                 </div>
-
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Disponibilidade</h3>
-                    <p class="text-muted-foreground">
-                        Disponível para projetos freelance e oportunidades full-time
-                    </p>
+                <div class="footer-col">
+                    <h3>Disponibilidade</h3>
+                    <p class="footer-availability">Disponível para posições Full Stack, Mobile iOS, liderança técnica de
+                        produto e projetos freelance de alto impacto.</p>
                 </div>
             </div>
-
-            <div class="border-t border-border mt-8 pt-8 text-center">
-                <p class="text-muted-foreground">
-                    © 2025 ItaloGabs. Desenvolvido com ❤️ e muito café.
-                </p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Italo Tavares. Bacharel em Sistemas de Informação & Dev Full Stack.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Visualização de imagem">
+        <button class="lightbox-close" aria-label="Fechar">&times;</button>
+        <img id="lightbox-img" src="" alt="Imagem ampliada">
+    </div>
+
     <!-- JavaScript -->
-    <script src="./assets/js/lightBox.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/main.js" defer></script>
 </body>
 
 </html>

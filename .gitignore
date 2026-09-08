@@ -1,0 +1,7 @@
+.DS_Store
+*/.DS_Store
+assets/.DS_Store
+
+# Private files / Curriculo
+*.pdf
+curriculol-italo-fullstack.pdf
